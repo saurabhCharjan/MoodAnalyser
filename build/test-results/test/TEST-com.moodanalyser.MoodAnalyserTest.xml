@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.moodanalyser.MoodAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-11T08:05:49" hostname="BATMAN" time="0.032">
+<testsuite name="com.moodanalyser.MoodAnalyserTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-05-11T10:50:49" hostname="BATMAN" time="0.044">
   <properties/>
-  <testcase name="given_Message_When_Null()" classname="com.moodanalyser.MoodAnalyserTest" time="0.032"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="Given_Message_When_Happy_Should_Return_Happy()" classname="com.moodanalyser.MoodAnalyserTest" time="0.029"/>
+  <testcase name="Given_Message_When_Empty_Should_throw_Exception()" classname="com.moodanalyser.MoodAnalyserTest" time="0.003"/>
+  <testcase name="Given_Message_When_Null_Should_throw_Exception()" classname="com.moodanalyser.MoodAnalyserTest" time="0.002"/>
+  <testcase name="print_Welcome_Message()" classname="com.moodanalyser.MoodAnalyserTest" time="0.004"/>
+  <testcase name="Given_Message_When_Sad_Should_Return_Sad()" classname="com.moodanalyser.MoodAnalyserTest" time="0.002"/>
+  <system-out><![CDATA[Welcome to the Mood Analyser Problem
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

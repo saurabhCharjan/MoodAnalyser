@@ -1,33 +1,22 @@
 package com.moodanalyser;
 
 public class MoodAnalyser {
-    public String AnalyseMood(String message) {
-        if (message.contains("Sad")) {
-            return "Sad";
-        } else {
-            return "Happy";
-        }
+    public void PrintWelcomeMessage() {
+        System.out.println("Welcome to the Mood Analyser Problem");
     }
-    public String AnalyseNull(String message) {
+
+    public String AnalyseMood(String message) throws MoodException {
         try {
-            if (message.contains("Sad")) {
-                return "Sad";
-            } else {
-                return "Happy";
-            }
-        }catch (NullPointerException e){
-            return "Happy";
-        }
-    }
-    public String analyseCustomException(String message) throws MoodException {
-        try {
-            if (message.contains("Sad")) {
-                return "Sad";
-            } else {
-                return "Happy";
-            }
-        }catch(NullPointerException e){
-        throw new MoodException("enter valid entry");
+            if(message.length() == 0)
+                throw new MoodException(MoodException.ExceptionType.ENTERED_EMPTY,"Enter Non-Empty Mood");
+            if(message.contains("Sad"))
+                return "SAD";
+            else
+                return "HAPPY";
+        } catch(NullPointerException e) {
+            throw new MoodException(MoodException.ExceptionType.ENTERED_NULL,"Enter the Proper Mood");
+        } catch(IllegalArgumentException e) {
+            throw new MoodException(MoodException.ExceptionType.ENTERED_NULL,"Enter the Proper Mood");
         }
     }
 }
